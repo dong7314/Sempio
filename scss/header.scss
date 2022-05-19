@@ -1,0 +1,39 @@
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  .wrapping {
+    height: 47px;
+    padding: 32px 0;
+    overflow: hidden;
+    #top-logo {
+      float: left;
+      width: 147px;
+      height: 100%;
+      a {
+        img {
+          height: 100%;
+        }
+      }
+    }
+    #top-nav {
+      ul {
+        float: right;
+        li {
+          float: left;
+          margin-left: 1.5em;
+          &:first-child {
+            margin-left: 0;
+          }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 47px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

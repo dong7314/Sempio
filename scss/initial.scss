@@ -1,0 +1,36 @@
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: white;
+  color: black;
+  font-family: 'Sofia Pro', sans-serif;
+  font-size: 22px;
+}
+
+html, body, ul, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: 500;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: .3s;
+  &:hover {
+    color: $fontColorHover;
+  }
+}
