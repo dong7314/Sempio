@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "user-select: none;TF-8";
 
 @import "var.scss"; // 변수
 @import "initial.scss"; // 초기화
@@ -6,3 +6,8 @@
 
 @import "layout.scss"; // 레이아웃 영역
 @import "header.scss"; // 헤더 영역
+@import "footer.scss"; // 푸터 영역
+
+// 서브 페이지
+@import "our_range.scss";
+@import "recipes.scss";

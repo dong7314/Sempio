@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title>Sempio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
   </head>
   <body>
+    <a href="#header" class="back-to-top"><div class="bg-back"></div></a>
     <div id="wrap">
       <header id="header">
         <div class="wrapping">
@@ -18,7 +18,7 @@
           </div>
           <nav id="top-nav">
             <ul>
-              <li><a href="#">Our range</a></li>
+              <li><a href="./our_range/our_range.html">Our range</a></li>
               <li><a href="#">Recipes</a></li>
               <li><a href="#">Who are Sempio</a></li>
               <li><a href="#">Global network</a></li>
@@ -28,7 +28,7 @@
         </div>
       </header>
       <main>
-        <section class="section1">
+        <section class="section1 mainpage">
           <div class="back-bg">
             <svg class="product-bg" xmlns="http://www.w3.org/2000/svg" width="962.733" height="627.781" viewBox="0 0 962.733 627.781">
               <path id="Union_3" data-name="Union 3" d="M1081.364-627.882c167.219-7.1,300.661-144.717,301.02-313.6h1.068V-313.7l-962.733,0c0-173.517,140.662-314.178,314.183-314.178Z" fill="#edb92d" transform="translate(-420.719 941.482)"></path>
@@ -51,7 +51,7 @@
             </div>
           </div>
         </section>
-        <section class="section2">
+        <section class="section2 mainpage">
           <div class="back-bg">
             <svg class="wedge" xmlns="http://www.w3.org/2000/svg" width="179.416" height="179.416" viewBox="0 0 179.416 179.416">
               <path id="Path_7500" data-name="Path 7500" d="M596.006,255.186l0,179.416-179.416,0A179.413,179.413,0,0,1,596.006,255.186Z" transform="translate(596.008 434.602) rotate(180)" fill="#ec539e"></path>
@@ -66,76 +66,90 @@
             </div>
             <div class="inner">
               <a href="#">Explore recipes</a>
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Kalbi Sauce</div>
-                      <div class="recipes-card-title">Grilled Short Rib Patties</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Gochujang Gluten Free</div>
-                      <div class="recipes-card-title">Dak-galbi</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Soy sauce</div>
-                      <div class="recipes-card-title">Potato & Leek Cream Soup</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Gochujang with Lemon</div>
-                      <div class="recipes-card-title">Cold Spice Pasta</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Tteokbokki Sauce Sweet & Spicy</div>
-                      <div class="recipes-card-title">Theokbokki</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Oil-free Vinaigrette</div>
-                      <div class="recipes-card-title">Vegetable Tempura</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Oil-free Vinaigrette</div>
-                      <div class="recipes-card-title">Halibut Ceviche</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Gochujang with Lemon</div>
-                      <div class="recipes-card-title">Prawns with Gochujang Cocktail Sauce</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">Soy Sauce</div>
-                      <div class="recipes-card-title">White Wine Mussels</div>
-                    </a>
-                  </div>
-                  <div class="swiper-slide recipes-card">
-                    <a href="#">
-                      <div class="product-card">BBQ Bulgogi Sauce</div>
-                      <div class="recipes-card-title">Jumeokbap</div>
-                    </a>
+              <div id="carousel-wrap">
+                <div id="carousel-prev" class="slide-btn"></div>
+                <div id="carousel-next" class="slide-btn"></div>
+                <div  id="carousel">
+                  <div id="carousel-inner">
+                    <ul class="column">
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/patties-port.jpg')">
+                          <div class="product-card">Kalbi Sauce</div>
+                          <div class="recipes-card-title"><p>Grilled Short Rib Patties</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/gochujang-dak-galbi-port.jpg')">
+                          <div class="product-card">Gochujang Gluten Free</div>
+                          <div class="recipes-card-title"><p>Dak-galbi</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/soy-leek-potato-soup-port.jpg')">
+                          <div class="product-card">Soy sauce</div>
+                          <div class="recipes-card-title"><p>Potato & Leek Cream Soup</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/gochujang-lemon-cold-pasta-port.jpg')">
+                          <div class="product-card">Gochujang with Lemon</div>
+                          <div class="recipes-card-title"><p>Cold Spice Pasta</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/tteokbokki-port.jpg')">
+                          <div class="product-card">Tteokbokki Sauce Sweet & Spicy</div>
+                          <div class="recipes-card-title"><p>Theokbokki</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/soy-veg-tempura-port.jpg')">
+                          <div class="product-card">Oil-free Vinaigrette</div>
+                          <div class="recipes-card-title"><p>Vegetable Tempura</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/soy-halibut-port.jpg')">
+                          <div class="product-card">Oil-free Vinaigrette</div>
+                          <div class="recipes-card-title"><p>Halibut Ceviche</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/gochujang-lemon-prawns-port.jpg')">
+                          <div class="product-card">Gochujang with Lemon</div>
+                          <div class="recipes-card-title"><p>Prawns with Gochujang Cocktail Sauce</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/soy-mussels-port.jpg')">
+                          <div class="product-card">Soy Sauce</div>
+                          <div class="recipes-card-title"><p>White Wine Mussels</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" style="background-image: url('./img/section2/japchae-5.png')">
+                          <div class="product-card">Japchae Sauce</div>
+                          <div class="recipes-card-title"><p>Japchae</p></div>
+                          <div class="shadow-box"></div>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
               </div>
             </div>
           </div>
         </section>
-        <section class="section3">
+        <section class="section3 mainpage">
           <div class="back-bg">
             <img src="./img/section3/sempio-writing.svg" alt="sempio-writing">
             <img src="./img/section3/yellow-pattern-alt.svg" alt="yellow-pattern">
@@ -161,7 +175,7 @@
             </div>
           </div>
         </section>
-        <section class="section4">
+        <section class="section4 mainpage">
           <div class="back-bg">
             <a href="#"><img src="./img/section4/Sempio-Brochure-Cover.jpg" alt="sempio-brochure-cover"></a>
             <a href="#">Download our product brochure today   ⟶</a>
@@ -177,7 +191,7 @@
             </div>
           </div>
         </section>
-        <section class="section5">
+        <section class="section5 mainpage">
           <div class="back-bg">
             <svg class="corner" xmlns="http://www.w3.org/2000/svg" width="139.523" height="139.524" viewBox="0 0 139.523 139.524">
               <path id="Path_8633" data-name="Path 8633" d="M40.877,272.734V412.258H180.4A139.524,139.524,0,0,1,40.877,272.734Z" transform="translate(-40.877 -272.734)"></path>
@@ -205,15 +219,16 @@
         </section>
       </main>
       <footer id="footer">
+        <div class="footer-bg">
+          <svg class="lines" xmlns="http://www.w3.org/2000/svg" width="121.09" height="178.335" viewBox="0 0 121.09 178.335">
+            <path id="Path_5767" data-name="Path 5767" d="M-8776.938,633.992h-28.754l-3.606-177.137h23.946Z" transform="translate(8809.299 -456.855)" fill="#e51c24"></path>
+            <path id="Path_5766" data-name="Path 5766" d="M-8776.359,456.855h22.742l6.01,177.137h-29.955Z" transform="translate(8826.729 -456.855)" fill="#e51c24"></path>
+            <path id="Path_5765" data-name="Path 5765" d="M-8731.336,634.766h-16.732l-2.4-177.137h29.955Z" transform="translate(8841.607 -456.43)" fill="#e51c24"></path>
+          </svg>
+        </div>
         <div class="wrapping">
-          <div class="footer-bg">
-            <svg class="lines" xmlns="http://www.w3.org/2000/svg" width="121.09" height="178.335" viewBox="0 0 121.09 178.335">
-              <path id="Path_5767" data-name="Path 5767" d="M-8776.938,633.992h-28.754l-3.606-177.137h23.946Z" transform="translate(8809.299 -456.855)" fill="#e51c24"></path>
-              <path id="Path_5766" data-name="Path 5766" d="M-8776.359,456.855h22.742l6.01,177.137h-29.955Z" transform="translate(8826.729 -456.855)" fill="#e51c24"></path>
-              <path id="Path_5765" data-name="Path 5765" d="M-8731.336,634.766h-16.732l-2.4-177.137h29.955Z" transform="translate(8841.607 -456.43)" fill="#e51c24"></path></svg>
-          </div>
           <div class="footer-logo inner">
-            <img src="./img/logo.png" alt="logo">
+            <img src="./img/footer-logo.png" alt="logo">
           </div>
           <div class="footer-main inner">
             <nav id="footer-nav">
@@ -229,7 +244,7 @@
               <div class="footer-main-left">
                 <p>2 Chugmuro, Junggu, Seoul, Korea 100- 728</p>
                 <p><span>Tel. </span>82-2-3393-5460~9</p>
-                <p><span>Email. </span>intl@sempio.com</p>
+                <p><span>Email. </span><a href="mailto:intl@sempio.com">intl@sempio.com</a></p>
               </div>
               <div class="footer-main-right">
                 <a href="#">Privacy Policy</a>
@@ -243,26 +258,5 @@
         </div>
       </footer>
     </div>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
   </body>
 </html>
