@@ -1,0 +1,297 @@
+main {
+  .section1.who_are_sempio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/who_are_sempio/section1/who-are-sempio-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 160px;
+      display: inline-block;
+      background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      display: inline-block;
+      background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    }
+    .back-bg {
+      .yellow-pattern {
+        position: absolute;
+        background-image: url('../img/who_are_sempio/section1/yellow-pattern.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+        right: 0;
+        transform: translateY(50%);
+        width: 35%;
+        height: 400px;
+        z-index: 5;
+      }
+    }
+    .wrapping {
+      height: 100%;
+      align-items: flex-end;
+      .inner {
+        position: relative;
+        flex-basis: 70%;
+        z-index: 1;
+        h1 {
+          margin-left: 1.1em;
+          padding-bottom: 1.2em;
+          font-size: $fontSizeh1;
+          color: white;
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 98px;
+            bottom: 0;
+            width: 2px;
+            height: 20%;
+            background: white;
+          }
+        }
+      }
+    }
+  }
+
+  .section2.who_are_sempio {
+    position: relative;
+    background: #EC539E;
+    padding: 8rem 0 12rem;
+    .back-bg {
+      svg {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        transform: translateY(50%);
+        width: 15%;
+        height: auto;
+        max-width: 400px;
+      }
+    }
+    .wrapping {
+      height: 100%;
+      .inner:nth-child(1) {
+        position: relative;
+        flex-basis: 45%;
+        h2 {
+          display: block;
+          font-size: $fontSizeh2;
+          margin-left: 6rem;
+          padding-bottom: 1.2rem;
+          &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 98px;
+            top: -128px;
+            width: 2px;
+            height: 80px;
+            background: black;
+          }
+        }
+      }
+      .inner:nth-child(2) {
+        flex-basis: 100%;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        p {
+          float: right;
+          width: 33%;
+          height: 100%;
+          color: white;
+          margin-bottom: 1.6em;
+          margin-right: 50px;
+          line-height: 35px;
+          &:nth-child(1) {
+            width: 30%;
+            margin-right: 6rem;
+          }
+        }
+      }
+    }
+  }
+
+  .section3.who_are_sempio {
+    position: relative;
+    width: 100%;
+    padding: 14rem 0 0;
+    background: white;
+    overflow-x: clip;
+    .back-bg {
+      svg {
+        position: absolute;
+        z-index: 1;
+        right: -1px;
+        top: -1px;
+        width: 10%;
+        max-width: 240px;
+        height: auto;
+        transform: rotate(180deg);
+        fill: #EC539E;
+      }
+    }
+    .wrapping {
+      .inner {
+        position: relative;
+        padding: 0 4rem;
+        box-sizing: border-box;
+        &:nth-child(1) {
+          flex-basis: 41%;
+          h2 {
+            font-size: $fontSizeh2;
+          }
+          p {
+            line-height: 1.7em;
+            margin: 2rem 0 0;
+          }
+        }
+        &:nth-child(2) {
+          flex-basis: 50%;
+        }
+      }
+      img {
+        position: absolute;
+        width: 40%;
+        height: auto;
+        right: 10rem;
+        bottom: 0;
+      }
+    }
+  }
+
+  .section4.who_are_sempio {
+    position: relative;
+    width: 100%;
+    margin-top: 160px;
+    padding: 320px 0 160px;
+    background-image: url('../img/section4/dot-globe-dark.svg');
+    background-position: top right;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    .back-bg {
+      a {
+        position: absolute;
+        &:nth-child(1) {
+          width: 30%;
+          bottom: 0;
+          right: 7.5rem;
+        }
+        & > img {
+          width: 100%;
+          height: auto;
+        }
+        &:nth-child(2) {
+          color: #EC539E;
+          right: 50%;
+          bottom: 30%;
+          &:hover {
+            color: black;
+          }
+        }
+      }
+      svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        bottom: calc(-1px + 60px);
+        fill: #E51C24;
+        transform: rotate(-90deg);
+        width: 12%;
+        height: auto;
+        max-width: 240px;
+      }
+    }
+    .wrapping {
+      display: block;
+      height: 89vh;
+      .inner {
+        position: relative;
+        width: 50%;
+        &:nth-child(1) {
+          h3 {
+            font-size: $fontSizeh3;
+          }
+          p {
+            width: 100%;
+            line-height: 1.7em;
+            margin: 2rem 0 4rem;
+          }
+          .btn-group {
+            a:nth-child(2) {
+              margin-left: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section5.who_are_sempio {
+    position: relative;
+    background: $section45Color;
+    padding: 6rem 0 8rem;
+    .back-bg {
+      .corner {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+        width: 10%;
+        max-width: 240px;
+        height: auto;
+      }
+    }
+    .wrapping {
+      .inner {
+        position: relative;
+        box-sizing: border-box;
+        &:nth-child(1) {
+          width: 50%;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        &:nth-child(2) {
+          padding-left: 50px;
+          width: 45%;
+          color: white;
+          h3 {
+            font-size: $fontSizeh3;
+            margin-top: 1rem;
+          }
+          p {
+            width: 78%;
+            line-height: 1.7em;
+            margin: 2rem 0 4rem;
+          }
+          a {
+            background: white;
+            color: black;
+            &:hover {
+              background: $btnHoverBgColor;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,7 +7,9 @@
 @import "layout.scss"; // 레이아웃 영역
 @import "header.scss"; // 헤더 영역
 @import "footer.scss"; // 푸터 영역
+@import "mediaquery.scss"; // 미디어 쿼리
 
 // 서브 페이지
 @import "our_range.scss";
 @import "recipes.scss";
+@import "who_are_sempio.scss";

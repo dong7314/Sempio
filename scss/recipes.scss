@@ -75,114 +75,104 @@ section.recipes {
   }
 }
 
-
-.section2.our_range {
-  position: sticky;
-  background: $ourRangePrimaryColor;
-  width: 100%;
-  height: 58px;
-  padding: 0;
-  top: 0;
-  z-index: 3;
-  .wrapping {
-    display: block;
-    height: 100%;
-    ul {
-      overflow: hidden;
-      height: 100%;
-      li {
-        float: left;
-        display: flex;
-        align-items: center;
-        margin-right: 1em;
-        height: 100%;
-        transition: .3s;
-        box-sizing: border-box;
-        &:first-child {
-          border-bottom: 2px solid $ourRangeHover;
-          a {
-            color: $ourRangeHover;
-          }
-        }
-        &:hover a {
-          color: $ourRangeHover;
-        }
-        a {
-          display: inline-block;
-          font-size: 1.1em;
-          color: white;
-        }
-      }
-    }
-  }
-}
-
-.section3.our_range {
+.section2.recipes {
   position: relative;
-  padding: 0;
   .back-bg {
+    .grain-bg {
+      position: absolute;
+      background-image: url('../img/recipes/section2/grain-pattern-light.svg');
+      background-color: $recipesPrimaryColor;
+      background-size: cover;
+      height: 300px;
+      width: 100%;
+      z-index: 1;
+    }
     svg {
       position: absolute;
-      left: 0;
-      bottom: 0;
       width: 10%;
+      max-width: 240px;
       height: auto;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
     }
   }
-  .wrapping {
-    flex-direction: column;
-    .inner {
-      padding: 7rem 0 0;
-      margin-top: 7rem;
+  .inner {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    ul.column {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
       width: 100%;
-      &:first-child {
-        padding: 0;
-      }
-      &:last-child {
-        border-top: 1px solid black;
-        padding-bottom: 10%;
-      }
-      h3 {
-        height: 50px;
-        font-size: 2.273em;
-        margin-bottom: 0.5em;
-      }
-      p {
-        width: 40%;
-        font-size: 20px;
-        margin-bottom: 32px;
-        line-height: 1.7em;
-      }
-      & > a {
+      height: auto;
+      li {
         display: inline-block;
-        padding-bottom: 11px;
-        border-bottom: 1px solid red;
-      }
-      .swiper {
-        width: 90%;
-        .swiper-slide {
-          width: 313px;
-          height: 452px;
-          a {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            img {
-              width: 313px;
-              height: 412px;
+        padding-right: 22px;
+        margin-bottom: 22px;
+        width: 25%;
+        max-height: 700px;
+        box-sizing: border-box;
+        z-index: 2;
+        a {
+          position: relative;
+          display: block;
+          height: 30vw;
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          &:hover .shadow-box {
+            opacity: 1;
+          }
+          .product-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $btnBgColor;
+            color: white;
+            font-size: 0.7em;
+            padding: 0.5em 0.8em 0.6em;
+            border-bottom-right-radius: 14px;
+            z-index: 1;
+          }
+          .recipes-card-title {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            display: inline-block;
+            width: 80%;
+            z-index: 1;
+            p {
+              color: white;
+              font-size: 34px;
+              text-align: center;
             }
-            h4 {
-              display: inline-block;
-            }
+          }
+          .shadow-box {
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            display: inline-block;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            opacity: .8;
+            transition: opacity 0.3s ease;
           }
         }
       }
-      &:last-child {
-        .swiper {
-          width: 50%;
-        }
-      }
     }
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 192px;
+    width: 100%;
+    background: white;
   }
 }
