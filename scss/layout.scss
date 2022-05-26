@@ -52,7 +52,7 @@ main {
         flex: 45%;
         &:nth-child(1) {
           h1 {
-            font-size: $fontSizeh1;
+            font-size: 5vw;
           }
           p {
             width: 70%;
@@ -478,6 +478,325 @@ main {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and ( max-width : 1200px ) {
+  main {
+    .section2.mainpage {
+      padding-top: 0;
+      height: 700px;
+      .wrapping {
+        .inner {
+          flex-basis: 100%;
+        }
+        .inner:nth-child(1) {
+          height: 50px;
+          p {
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            width: 50%;
+          }
+        }
+        .inner:nth-child(2) {
+          & > a {
+            margin-bottom: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  main .section3.mainpage .wrapping .inner {
+    flex-basis: 50%;
+    &:nth-child(2) {
+      padding: 0;
+      h2 {
+        font-size: 38px;
+      }
+      p {
+        font-size: 19px;
+      }
+      a {
+        font-size: 17.1px;
+      }
+    }
+  }
+
+  main .section4.mainpage {
+    .back-bg {
+      a:nth-of-type(2) {
+        font-size: 19px;
+      }
+    }
+    .wrapping {
+      height: 700px;
+      .inner {
+        &:nth-child(1) {
+          h3 {
+            font-size: 43px;
+          }
+          p {
+            font-size: 19px;
+          }
+          a {
+            font-size: 17.1px;
+          }
+        }
+      }
+    }
+  }
+
+  main .section5.mainpage {
+    .wrapping {
+      .inner {
+        &:nth-child(2) {
+          h3 {
+            font-size: 43px;
+          }
+          p {
+            font-size: 19px;
+          }
+          a {
+            font-size: 17.1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 990px ) {
+  main {
+    .section1.mainpage {
+      padding: 111px 0 64px;
+      min-height: 500px;
+      .wrapping {
+        min-height: 500px;
+        .inner {
+          &:nth-child(1) {
+            p {
+              font-size: 19px;
+              width: 95%;
+              margin: 1rem 0 1rem;
+            }
+            .btn-group {
+              a:nth-child(2) {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main .section2.mainpage .wrapping .inner:nth-child(1) p {
+    width: 500px;
+    left: 140px;
+  }
+
+  main .section3.mainpage {
+    padding: 80px 0 48px;
+    .back-bg {
+      display: none;
+    }
+  }
+
+  main .section3.mainpage .wrapping .inner:nth-child(1) {
+    padding: 0 20px 0 0;
+  }
+
+  main .section4.mainpage {
+    .back-bg a:nth-of-type(2) {
+      display: block;
+      width: 220px;
+      line-height: 30px;
+    }
+    .wrapping {
+      height: 600px;
+    }
+  }
+
+  main .section4.mainpage .wrapping .inner:nth-child(1) {
+    width: 70%;
+    p {
+      margin: 15px 0 15px;
+    }
+  }
+
+  main .section5.mainpage {
+    .wrapping {
+      .inner {
+        flex-basis: 49%;
+        &:nth-child(2) {
+          padding: 0;
+          p {
+            width: 100%;
+            margin: 16px 0 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 767px ) {
+  main .section1.mainpage .wrapping .inner:nth-child(1) p {
+    font-size: 16px;
+  }
+  main .section1.mainpage .wrapping .inner:nth-child(1) .btn-group a {
+    font-size: 16px;
+  }
+  main {
+    .section2.mainpage .wrapping .inner {
+      flex-basis: 100%;
+    }
+  }
+
+  main .section2.mainpage .wrapping .inner:nth-child(1) p {
+    font-size: 38px;
+    left: 125px;
+  }
+
+  main .section3.mainpage .wrapping .inner {
+    &:nth-child(1) {
+      flex-basis: 100%;
+      padding-bottom: 32px;
+    }
+    &:nth-child(2) {
+      flex-basis: 100%;
+      h2 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 16px;
+      }
+      a {
+        font-size: 14.4px;
+      }
+    }
+  }
+
+  main .section4.mainpage {
+    .back-bg {
+      a:nth-of-type(1) {
+        width: 40vw;
+        font-size: 16px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0;
+      }
+      a:nth-of-type(2) {
+        width: 320px;
+        font-size: 16px;
+        transform: translateX(50%);
+        bottom: 50%;
+        right: 50%;
+      }
+    }
+    .wrapping {
+      height: 800px;
+    }
+  }
+
+  main .section4.mainpage .wrapping .inner:nth-child(1) {
+    width: 100%;
+    h3 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+      margin: 16px 0 24px;
+    }
+    a {
+      font-size: 14.4px;
+    }
+  }
+
+  main .section5.mainpage {
+    padding: 3rem 0 4rem;
+    .wrapping {
+      .inner {
+        width: 100%;
+        flex-basis: 100%;
+        &:nth-child(2) {
+          h3 {
+            font-size: 36px;
+          }
+          p {
+            font-size: 16px;
+          }
+          a {
+            font-size: 14.4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 575px ) {
+  main {
+    .section1.mainpage {
+      .wrapping {
+        .inner {
+          flex-basis: 100%;
+          &:nth-child(1) {
+            h1 {
+              margin-top: 48px;
+              font-size: 42px;
+            }
+            .btn-group {
+              a {
+                display: block;
+                width: 100%;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main .section2.mainpage .wrapping .inner:nth-child(1) p {
+    width: 300px;
+    font-size: 38px;
+    left: 125px;
+  }
+
+  main .section3.mainpage .wrapping .inner:nth-child(2) a {
+    width: 100%;
+  }
+
+  main .section4.mainpage {
+    .back-bg {
+      a:nth-of-type(2) {
+        width: 320px;
+        font-size: 16px;
+        transform: translateX(50%);
+        bottom: 330px;
+        right: 50%;
+      }
+    }
+    .wrapping {
+      height: 650px;
+    }
+  }
+  main .section4.mainpage .wrapping .inner:nth-child(1) {
+    a {
+      width: 100%;
+    }
+  }
+
+  main .section5.mainpage .wrapping .inner:nth-child(2) {
+    a {
+      width: 100%;
     }
   }
 }

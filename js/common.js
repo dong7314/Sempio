@@ -27,38 +27,88 @@ $(function(){
   $('#carousel-inner ul.column').css('width', widthNum*liLeng);
   // 슬라이드 포지션 초기화 함수
   function initialFunc(init) {
-    carInner.css('margin-left', -widthNum*3);
-    if ( init === 'prev' ) {
-      $('ul.column li:last').prependTo('ul.column');
-      $('ul.column li:last').prependTo('ul.column');
-      $('ul.column li:last').prependTo('ul.column');
-    } else if ( init === 'next' ) {
-      $('ul.column li:first').appendTo('ul.column');
-      $('ul.column li:first').appendTo('ul.column');
-      $('ul.column li:first').appendTo('ul.column');
+    if ( $(window).width() <= 575 ) {
+      carInner.css('margin-left', -widthNum*1);
+      if ( init === 'prev' ) {
+        $('ul.column li:last').prependTo('ul.column');
+      } else if ( init === 'next' ) {
+        $('ul.column li:first').appendTo('ul.column');
+      }
+    } else if ( $(window).width() <= 767 ) {
+      carInner.css('margin-left', -widthNum*2);
+      if ( init === 'prev' ) {
+        $('ul.column li:last').prependTo('ul.column');
+        $('ul.column li:last').prependTo('ul.column');
+      } else if ( init === 'next' ) {
+        $('ul.column li:first').appendTo('ul.column');
+        $('ul.column li:first').appendTo('ul.column');
+      }
+    } else {
+      carInner.css('margin-left', -widthNum*3);
+      if ( init === 'prev' ) {
+        $('ul.column li:last').prependTo('ul.column');
+        $('ul.column li:last').prependTo('ul.column');
+        $('ul.column li:last').prependTo('ul.column');
+      } else if ( init === 'next' ) {
+        $('ul.column li:first').appendTo('ul.column');
+        $('ul.column li:first').appendTo('ul.column');
+        $('ul.column li:first').appendTo('ul.column');
+      }
     }
   }
-
+  function actionBtn(elem){
+    if ( $(window).width() <= 575 ) {
+      elem.click(function(){
+        let carInMarginLeft = parseInt(carInner.attr('style').split(':')[1]);
+        let isAni = carInner.is(':animated');
+        if ( !isAni ) {
+          if( elem.attr('id') == 'carousel-prev' ) {
+            carInner.animate({ marginLeft: carInMarginLeft + widthNum*1 }, 'slow', 'swing',function(){
+              initialFunc('prev');
+            })
+          } else if ( elem.attr('id') == 'carousel-next' ) {
+            carInner.animate({ marginLeft: carInMarginLeft - widthNum*1 }, 'slow', 'swing',function(){
+              initialFunc('next');
+            })
+          };
+        };
+      });
+    } else if ( $(window).width() <= 767 ) {
+      elem.click(function(){
+        let carInMarginLeft = parseInt(carInner.attr('style').split(':')[1]);
+        let isAni = carInner.is(':animated');
+        if ( !isAni ) {
+          if( elem.attr('id') == 'carousel-prev' ) {
+            carInner.animate({ marginLeft: carInMarginLeft + widthNum*2 }, 'slow', 'swing',function(){
+              initialFunc('prev');
+            })
+          } else if ( elem.attr('id') == 'carousel-next' ) {
+            carInner.animate({ marginLeft: carInMarginLeft - widthNum*2 }, 'slow', 'swing',function(){
+              initialFunc('next');
+            })
+          };
+        };
+      });
+    } else {
+      elem.click(function(){
+        let carInMarginLeft = parseInt(carInner.attr('style').split(':')[1]);
+        let isAni = carInner.is(':animated');
+        if ( !isAni ) {
+          if( elem.attr('id') == 'carousel-prev' ) {
+            carInner.animate({ marginLeft: carInMarginLeft + widthNum*3 }, 'slow', 'swing',function(){
+              initialFunc('prev');
+            })
+          } else if ( elem.attr('id') == 'carousel-next' ) {
+            carInner.animate({ marginLeft: carInMarginLeft - widthNum*3 }, 'slow', 'swing',function(){
+              initialFunc('next');
+            })
+          };
+        };
+      });
+    }
+  }
   // 슬라이드 포지션 초기화
   initialFunc('prev')
-
-  function actionBtn(elem){
-    elem.click(function(){
-      let carInMarginLeft = parseInt(carInner.css('margin-left'));
-      let isAni = carInner.is(':animated');
-      if ( !isAni ) {
-        if( elem.attr('id') == 'carousel-prev' ) {
-          carInner.animate({ marginLeft: carInMarginLeft + widthNum*3 }, 'slow', 'swing',function(){
-            initialFunc('prev');
-          })
-        } else if ( elem.attr('id') == 'carousel-next' ) {
-          carInner.animate({ marginLeft: carInMarginLeft - widthNum*3 }, 'slow', 'swing',function(){
-            initialFunc('next');
-          })
-        };
-      };
-    });
-  }
 
   $('.slide-btn').each(function(){
     actionBtn($(this));
@@ -81,7 +131,7 @@ $(function(){
   });
 
   // timewrap fixed
-  if ( locationHref(location) == 'who_are_sempio ') {
+  if ( locationHref(location) == 'who_are_sempio' ) {
     $(window).scroll(function(){
       let timewrap = $('.section5.who_are_sempio .wrapping .inner .time-wrap');
       if ( $(this).scrollTop() >= $('.section5.who_are_sempio').offset().top ) {

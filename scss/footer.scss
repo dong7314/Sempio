@@ -54,7 +54,7 @@
         justify-content: space-between;
         margin-top: 5rem;
         .footer-main-left {
-          flex: 50%;
+          flex: 55%;
           p {
             margin: 0;
             font-size: 18.7px;
@@ -71,7 +71,7 @@
           }
         }
         .footer-main-right {
-          flex: 50%;
+          flex: 45%;
           a {
             display: block;
             width: 100%;
@@ -88,6 +88,126 @@
         margin-top: 5rem;
         font-size: 16.5px;
       }
+    }
+  }
+}
+
+@media screen and ( max-width: 1200px ) {
+  #footer {
+    .wrapping {
+      .footer-logo {
+        flex-basis: 25%;
+      }
+      .footer-main {
+        flex-basis: 75%;
+        #footer-nav {
+          ul {
+            li {
+              a {
+                font-size: 19px;
+              }
+            }
+          }
+        }
+        .information {
+          .footer-main-left {
+            p {
+              font-size: 16.15px;
+            }
+          }
+          .footer-main-right {
+            a {
+              font-size: 16.15px;
+            }
+          }
+        }
+        .copyright {
+          font-size: 14.25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 990px ) {
+  #footer {
+    padding: 64px 0;
+    height: 390px;
+    .footer-bg {
+      display: none;
+    }
+    .wrapping {
+      .footer-logo.inner {
+        flex-basis: 100%;
+        padding-bottom: 20px;
+      }
+      .footer-main.inner {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 767px ) {
+  #footer {
+    height: 350px;
+    padding-bottom: 32px;
+    .wrapping {
+      .footer-main {
+        #footer-nav {
+          ul {
+            li {
+              width: 49%;
+              margin-right: 0;
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .information {
+          margin-top: 1.5rem;
+          .footer-main-left {
+            p {
+              font-size: 13.6px;
+            }
+          }
+          .footer-main-right {
+            a {
+              font-size: 13.6px;
+            }
+          }
+        }
+        .copyright {
+          margin-top: 1.5rem;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width : 575px ) {
+  #footer {
+    height: 400px;
+  }
+
+  #footer .wrapping .footer-main .information {
+    display: block;
+  }
+  #footer .wrapping .footer-main.inner .information .footer-main-left {
+    flex-basis: 100%;
+    p {
+      width: 100%;
+      height: 25px;
+    }
+  }
+  #footer .wrapping .footer-main.inner .information .footer-main-right {
+    flex-basis: 100%;
+    padding-top: 20px;
+    a {
+      width: 100%;
+      height: 25px;
     }
   }
 }
