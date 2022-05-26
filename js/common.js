@@ -9,7 +9,7 @@ $(function(){
     }
   });
 
-  $('.back-to-top').click(function(){
+  $('.back-to-top, .time-wrap ul li a').click(function(){
     let thisHash = $(this.hash);
     let isAni = $('html,body').is(':animated');
     if ( !isAni ) {
@@ -20,7 +20,7 @@ $(function(){
 
   // slide banner
   const carInner = $('#carousel-inner');
-  const widthNum = 320;
+  const widthNum = $('#carousel ul li').outerWidth();
   // li의 개수 가져오기
   let liLeng = carInner.find('ul.column li').length;
   // li의 개수로 ul.column의 너비를 설정
@@ -63,26 +63,74 @@ $(function(){
   $('.slide-btn').each(function(){
     actionBtn($(this));
   });
-  /*
-  // auto slide 구현
-  let timerId = null;
-  let auto = function(){
-    timerId = setInterval(function(){
-      $('#carousel-next').trigger('click');
-    }, 3000);
-    return timerId;
+
+  // header, footer underline
+  function locationHref(value){
+    let valueHref = $(value).attr('href').split('/');
+    valueHref = valueHref[valueHref.length-1];
+    valueHref = valueHref.split('.')[0];
+    return valueHref;
   }
 
-  auto();
-
-  $('#carousel, #carousel-prev, #carousel-next').on({
-    mouseenter: function(){
-      clearInterval(timerId);
-    }, mouseleave: function(){
-      timerId = setInterval(function(){
-        $('#carousel-next').trigger('click');
-      }, 3000);
+  let currentHref = locationHref(location);
+  $('#top-nav ul li a, #footer-nav ul li a').each(function(){
+    let matchHref = locationHref(this);
+    if ( currentHref == matchHref ) {
+      $(this).addClass('on');
     }
   });
-  */
+
+  // timewrap fixed
+  if ( locationHref(location) == 'who_are_sempio ') {
+    $(window).scroll(function(){
+      let timewrap = $('.section5.who_are_sempio .wrapping .inner .time-wrap');
+      if ( $(this).scrollTop() >= $('.section5.who_are_sempio').offset().top ) {
+        timewrap.css('position', 'fixed').css('top', '160px');
+      } else {
+        timewrap.css('position', 'relative').css('top', '0');
+      }
+    });
+  }
+
+  // global_network tab click
+  $('.tab-nav li').each(function(){
+    $(this).click(function(){
+      $('.tab-nav li').each(function(){
+        $(this).removeClass('tab');
+      });
+      $(this).addClass('tab');
+      let aText = $('a', this).text();
+      $('.information-box').each(function(){
+        $(this).removeClass('tab');
+        $('.information-box').each(function(){
+          if ( $(this).hasClass(aText) ) {
+            $(this).addClass('tab');
+          }
+        });
+      });
+    });
+  });
+
+  // shop our range click
+  $('#top-nav ul li:nth-child(5) a, #footer-nav ul li:nth-child(5) a').click(function(){
+    $('#shop-our-range').addClass('active');
+    $('#header').css('z-index', '0');
+    return false;
+  })
+  $('#shop-our-range .close-btn').click(function(){
+    $('#shop-our-range').removeClass('active');
+    $('#header').css('z-index', '3');
+  })
+
+  // mediaquery
+
+  // header slide
+  $('#click-header').click(function(){
+    $('#header .wrapping #top-nav ul').slideToggle();
+  });
+  $(window).resize(function(){
+    if ($(this).width() >= 1150 && $(this).width() < 1250) {
+      $('#top-nav ul').attr('style', '');
+    }
+  });
 });

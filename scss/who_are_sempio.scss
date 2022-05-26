@@ -50,15 +50,15 @@ main {
         flex-basis: 70%;
         z-index: 1;
         h1 {
-          margin-left: 1.1em;
+          margin-left: 5vw;
           padding-bottom: 1.2em;
-          font-size: $fontSizeh1;
+          font-size: 5.5vw;
           color: white;
           &:after {
             content: "";
             position: absolute;
             display: block;
-            left: 98px;
+            left: 5vw;
             bottom: 0;
             width: 2px;
             height: 20%;
@@ -241,14 +241,15 @@ main {
       }
     }
     .wrapping {
-      align-items: baseline;
+      align-items: flex-start;
       .inner {
         position: relative;
         box-sizing: border-box;
         &:nth-child(1) {
-          position: relative;
           flex-basis: 20%;
           .time-wrap {
+            position: relative;
+            top: 0;
             ul li {
               height: 35px;
             }

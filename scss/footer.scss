@@ -29,10 +29,21 @@
           li {
             float: left;
             margin-right: 1.5rem;
+            height: 31px;
             a {
+              display: block;
               color: white;
+              transition-property: color;
+              box-sizing: border-box;
+              height: 31px;
               &:hover {
                 color: $fontColorHover;
+              }
+              &.on {
+                border-bottom: 2px solid #E51C24;
+                &:hover {
+                  color: white;
+                }
               }
             }
           }

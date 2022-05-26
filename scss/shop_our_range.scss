@@ -1,0 +1,54 @@
+#shop-our-range {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(226,28,36,0.96);
+  transition: .7s;
+  z-index: -1;
+  opacity: 0;
+  &.active {
+    z-index: 10;
+    opacity: 1;
+  }
+  .close-btn {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .4s;
+    cursor: pointer;
+    &:hover {
+      color: #890413;
+    }
+  }
+  .global-amazon {
+    text-align: center;
+    p {
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 16px;
+      &:nth-of-type(2) {
+        margin-bottom: 64px;
+      }
+    }
+    .btn {
+      background: white;
+      color: black;
+      &:hover {
+        background: #890413;
+        color: white;
+      }
+    }
+    span {
+      margin: 0 16px;
+    }
+  }
+}
