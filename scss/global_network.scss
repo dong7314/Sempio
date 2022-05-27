@@ -6,6 +6,7 @@ main {
     background-image: url('../img/global_network/section1/global-network-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     &:before {
       content: "";
       position: absolute;
@@ -35,6 +36,7 @@ main {
         bottom: 0;
         transform: translateY(50%);
         z-index: 3;
+        width: 12%;
       }
     }
     .wrapping {
@@ -257,6 +259,206 @@ main {
                   a {
                     color: #E51C24;
                     cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    .section1.global_network {
+      height: 75vh;
+    }
+    .section2.global_network {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            p {
+              font-size: 26.6px;
+              line-height: 35px;
+            }
+            a {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+    .section3.global_network {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            height: 12vw;
+            a {
+              font-size: 19px;
+            }
+          }
+          &:nth-child(2) {
+            h3 {
+              margin-top: 0;
+              font-size: 43px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 19px;
+                }
+              }
+            }
+            .information-box {
+              ul {
+                li {
+                  h4 {
+                    font-size: 22.8px;
+                  }
+                  span {
+                    font-size: 19px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  main {
+    .section2.global_network {
+      padding: 64px 0;
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            p {
+              margin: 0 0 40px 0;
+            }
+            a {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .section3.global_network {
+      padding: 64px 0;
+      .wrapping {
+        .inner {
+          &:nth-child(2) {
+            padding-left: 0;
+            flex-basis: 100%;
+            .information-box {
+              ul {
+                li {
+                  height: 30px;
+                  line-height: 30px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    .section1.global_network {
+      height: 50vh;
+      .wrapping {
+        .inner {
+          flex-basis: 100%;
+          h1 {
+            font-size: 46px;
+          }
+        }
+      }
+    }
+    .section2.global_network {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            flex-basis: 100%;
+            p {
+              font-size: 22.4px;
+              line-height: 30px;
+            }
+            a {
+              font-size: 16px;
+            }
+          }
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+    .section3.global_network {
+      padding: 48px 0;
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            a {
+              font-size: 16px;
+            }
+          }
+          &:nth-child(2) {
+            h3 {
+              font-size: 36px;
+            }
+            ul {
+              li {
+                a {
+                  font-size: 16px;
+                }
+              }
+            }
+            .information-box {
+              ul {
+                li {
+                  line-height: 25px;
+                  height: 25px;
+                  h4 {
+                    font-size: 19.2px;
+                  }
+                  span {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    .section3.global_network {
+      padding: 48px 0;
+      .wrapping {
+        .inner {
+          &:nth-child(2) {
+            ul {
+              li {
+                margin: 0 26px;
+              }
+            }
+            .information-box {
+              ul {
+                li {
+                  h4 {
+                    font-size: 17px;
                   }
                 }
               }

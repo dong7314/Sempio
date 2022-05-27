@@ -588,6 +588,70 @@ main {
                   }
                 }
               }
+              .timeline-items {
+                width: 100%;
+                .timeline-content {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  padding-bottom: 40px;
+                  .side-bg.left {
+                    display: none;
+                  }
+                  .side-bg.right {
+                    display: none;
+                  }
+                  img {
+                    width: auto;
+                    height: 25vw;
+                  }
+                  p {
+                    padding: 0;
+                    min-height: 0;
+                  }
+                  &.right {
+                    float: left;
+                    padding-left: 32px;
+                    margin-left: 4px;
+                    border-left: 2px solid black;
+                  }
+                  &.left {
+                    text-align: left;
+                    float: left;
+                    position: relative;
+                    padding-right: 0;
+                    padding-left: 32px;
+                    margin-left: 4px;
+                    box-sizing: border-box;
+                    border-right: 0;
+                    border-left: 2px solid black;
+                  }
+                  &.left.last {
+                    &:before {
+                      position: absolute;
+                      display: block;
+                      content: '';
+                      width: 10px;
+                      height: 2px;
+                      background: black;
+                      left: -6.25px;
+                      bottom: 0;
+                    }
+                  }
+                  &.right.last {
+                    &:after {
+                      position: absolute;
+                      display: block;
+                      content: '';
+                      width: 10px;
+                      height: 2px;
+                      background: black;
+                      left: -6.25px;
+                      bottom: 0;
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -662,6 +726,31 @@ main {
             margin: 0 0 32px 0;
             font-size: 16px;
             line-height: 1.5em;
+          }
+        }
+      }
+    }
+    .section5.who_are_sempio {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            display: none;
+          }
+          &:nth-child(2) {
+            padding-left: 0;
+            ul {
+              .timeline-items {
+                .timeline-content {
+                  img {
+                    height: 40vw;
+                  }
+                  p {
+                    font-size: 16px;
+                    line-height: 25px;
+                  }
+                }
+              }
+            }
           }
         }
       }
