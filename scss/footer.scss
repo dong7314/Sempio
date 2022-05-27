@@ -105,6 +105,13 @@
             li {
               a {
                 font-size: 19px;
+                &.on {
+                  border-bottom: 0;
+                  color: #E51C24;
+                  &:hover {
+                    color: #E51C24;
+                  }
+                }
               }
             }
           }

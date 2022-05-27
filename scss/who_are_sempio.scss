@@ -6,6 +6,7 @@ main {
     background-image: url('../img/who_are_sempio/section1/who-are-sempio-hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     &:before {
       content: "";
       position: absolute;
@@ -99,7 +100,7 @@ main {
             content: "";
             position: absolute;
             display: block;
-            left: 98px;
+            left: 5vw;
             top: -128px;
             width: 2px;
             height: 80px;
@@ -132,7 +133,7 @@ main {
   .section3.who_are_sempio {
     position: relative;
     width: 100%;
-    padding: 14rem 0 0;
+    padding: 14rem 0 64px;
     background: white;
     overflow-x: clip;
     .back-bg {
@@ -149,15 +150,20 @@ main {
       }
     }
     .wrapping {
-      height: 25vw;
+      height: 35vw;
       .inner {
         position: relative;
         box-sizing: border-box;
         width: 50%;
+        height: 100%;
         &:nth-child(1) {
-          padding: 0 10rem 0 6rem;
+          padding: 0 8rem 0 6rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
           h2 {
             font-size: $fontSizeh2;
+            color: #E51C24;
           }
           p {
             line-height: 1.7em;
@@ -170,7 +176,7 @@ main {
           height: 100%;
           img {
             position: absolute;
-            width: 75%;
+            width: 90%;
             bottom: 0;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .3);
           }
@@ -195,7 +201,7 @@ main {
         }
         &.second {
           top: 220px;
-          right: 90px;
+          left: 150px;
         }
       }
       svg {
@@ -225,6 +231,7 @@ main {
       }
     }
   }
+
   .section5.who_are_sempio {
     position: relative;
     background: $layoutBg;
@@ -396,6 +403,327 @@ main {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    .section2.who_are_sempio {
+      .wrapping {
+        .inner:nth-child(1) {
+          flex-basis: 50%;
+          h2 {
+            font-size: 38px;
+          }
+        }
+        .inner:nth-child(2) {
+          p {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+    .section3.who_are_sempio {
+      .wrapping {
+        height: 42vh;
+        .inner:nth-child(1) {
+          padding-right: 6rem;
+          h2 {
+            font-size: 43px;
+          }
+          p {
+            margin-top: 16px;
+            font-size: 19px;
+            line-height: 30px;
+          }
+        }
+        .inner:nth-child(2) {
+          img {
+            width: 75%;
+          }
+        }
+      }
+    }
+    .section4.who_are_sempio {
+      margin-top: 64px;
+      padding: 160px 0 80px;
+      .back-bg {
+        .char-box {
+          &.first {
+            left: 50px;
+          }
+          &.second {
+            top: 130px;
+            left: 100px;
+          }
+        }
+      }
+      .wrapping {
+        .inner {
+          width: 65%;
+          p {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+    .section5.who_are_sempio {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            flex-basis: 12%;
+          }
+          &:nth-child(2) {
+            flex-basis: 88%;
+            .time-wrap {
+            }
+            .timeline-icon {
+            }
+            ul {
+              li.timeline-items {
+                p {
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  main {
+    .section1.who_are_sempio {
+      height: 75vh;
+      .back-bg {
+        .yellow-pattern {
+          width: 26%;
+          height: 130px;
+        }
+      }
+      .wrapping {
+        .inner {
+          flex-basis: 100%;
+          h1 {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .section2.who_are_sempio {
+      padding: 64px 0;
+      .wrapping {
+        .inner:nth-child(1) {
+          flex-basis: 100%;
+          h2 {
+            margin-left: 20px;
+            font-size: 38px;
+          }
+        }
+        .inner:nth-child(2) {
+          p {
+            width: 45%;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .section3.who_are_sempio {
+      .wrapping {
+        height: 42vh;
+        .inner:nth-child(1) {
+          padding: 0;
+          p {
+            padding-right: 10px;
+          }
+        }
+        .inner:nth-child(2) {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .section4.who_are_sempio {
+      .wrapping {
+        .inner {
+          width: 80%;
+        }
+      }
+    }
+    .section5.who_are_sempio {
+      .wrapping {
+        .inner {
+          &:nth-child(1) {
+            flex-basis: 20%;
+          }
+          &:nth-child(2) {
+            flex-basis: 80%;
+            position: relative;
+            svg {
+              position: absolute;
+              top: 0;
+              left: 50%;
+            }
+            ul {
+              padding-left: 20px;
+              .timeline {
+                h4 {
+                  text-align: left;
+                  font-size: 22.8px;
+                  &:after {
+                    left: 4px;
+                    width: 2px;
+                  }
+                  &:before {
+                    left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  main .section2.who_are_sempio .wrapping .inner:nth-child(2) p:nth-child(1) {
+    float: left;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  main .section2.who_are_sempio .wrapping .inner:nth-child(2) p:nth-child(1) {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    .section2.who_are_sempio {
+      .back-bg {
+        svg {
+          z-index: 1;
+        }
+      }
+      .wrapping {
+        .inner:nth-child(1) {
+          h2 {
+            font-size: 32px;
+          }
+        }
+        .inner:nth-child(2) {
+          p {
+            width: 49%;
+            z-index: 5;
+            font-size: 16px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    .section3.who_are_sempio {
+      .wrapping {
+        .inner:nth-child(1) {
+          h2 {
+            font-size: 36px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .section4.who_are_sempio {
+      margin-top: 0;
+      padding: 128px 0 48px;
+      .back-bg {
+        .char-box {
+          &.first {
+            left: 30px;
+          }
+          &.second {
+            top: 80px;
+            left: 70px;
+          }
+        }
+      }
+      .wrapping {
+        .inner {
+          width: 100%;
+          p {
+            margin: 0 0 32px 0;
+            font-size: 16px;
+            line-height: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px ) {
+  main {
+    .section1.who_are_sempio {
+      .wrapping {
+        .inner {
+          h1 {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+    .section2.who_are_sempio {
+      .wrapping {
+        .inner:nth-child(2) {
+          p {
+            &:nth-child(1) {
+              width: 100%;
+              margin-bottom: 30px;
+            }
+            float: left;
+            margin-left: 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .section3.who_are_sempio {
+      padding-top: 64px;
+      .wrapping {
+        height: 82vh;
+        justify-content: center;
+        .inner {
+          flex-basis: 100%;
+          &:nth-child(1) {
+            justify-content: flex-start;
+            height: 320px;
+          }
+          &:nth-child(2) {
+            img {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+    .section4.who_are_sempio {
+      margin-top: 200px;
+      .back-bg {
+        .char-box {
+          &.first {
+            left: 20px;
+          }
+          &.second {
+            top: 80px;
+            left: 60px;
           }
         }
       }

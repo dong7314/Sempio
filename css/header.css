@@ -103,7 +103,7 @@
   }
   #header .wrapping #top-nav ul li {
     padding-left: 5vw;
-    width: 100%;
+    width: 90%;
     margin-left: 0;
   }
   #header .wrapping #top-nav ul li:last-child a {
@@ -122,6 +122,10 @@
     box-sizing: border-box;
   }
   #header .wrapping #top-nav ul li a:hover {
+    color: #E51C24;
+  }
+  #header .wrapping #top-nav ul li a.on {
+    border-bottom: 1px solid white;
     color: #E51C24;
   }
 }

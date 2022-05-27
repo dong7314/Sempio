@@ -36,7 +36,7 @@
           </div>
           <div class="wrapping">
             <div class="inner">
-              <h1>Eat Korean<br>your way</h1>
+              <h1>Eat Korean your way</h1>
             </div>
             <div class="inner">
               <p>Take your everyday cooking on a flavor adventure with our range of sauces, pastes and ready-to-cook products.</p>
@@ -67,33 +67,33 @@
               <a href="#">Learn More</a>
               <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                  <div id="slide1" class="swiper-slide">
                     <a href="#">
                       <img src="../img/our_range/section3/Kimchi-at-home.png" alt="vegan">
                       <h4>Kimchi @ Home Kit, Vegan</h4>
                     </a>
                   </div>
-                  <div class="swiper-slide">
+                  <div id="slide2" class="swiper-slide">
                     <a href="#">
                       <img src="../img/our_range/section3/Kimchi-at-home-classic.png" alt="classic">
                       <h4>Kimchi @ Home Kit, Classic</h4>
                     </a>
                   </div>
-                  <div class="swiper-slide">
+                  <div id="slide3" class="swiper-slide">
                     <a href="#">
                       <img src="../img/our_range/section3/Kimchi-Base-Sauce.png" alt="baseVegan">
                       <h4>Kimchi Base Sauce, Vegan</h4>
                     </a>
                   </div>
-                  <div class="swiper-slide">
+                  <div id="slide4" class="swiper-slide">
                     <a href="#">
                       <img src="../img/our_range/section3/Kimchi-Base-Sauce-Classic.png" alt="baseClassic">
                       <h4>Kimchi Base Sauce, Classic</h4>
                     </a>
                   </div>
                 </div>
-                <!-- <div class="swiper-button-next slide-btn"></div>
-                <div class="swiper-button-prev slide-btn"></div> -->
+                <div class="swiper-button-next slide-btn"></div>
+                <div class="swiper-button-prev slide-btn"></div>
               </div>
             </div>
             <div class="inner">
@@ -115,8 +115,8 @@
                     </a>
                   </div>
                 </div>
-                <!-- <div class="swiper-button-next slide-btn"></div>
-                <div class="swiper-button-prev slide-btn"></div> -->
+                <div class="swiper-button-next slide-btn next2"></div>
+                <div class="swiper-button-prev slide-btn prev2"></div>
               </div>
             </div>
           </div>
@@ -187,25 +187,37 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+          575: {
+            slidesPerView: 2
+          },
+          990: {
+            slidesPerView: 3
+          },
+          1200: {
+            slidesPerView: 4,
+          }
+        }
       });
 
       var swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+          575: {
+            slidesPerView: 2
+          }
+        }
       });
     </script>
   </body>

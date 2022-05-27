@@ -112,6 +112,7 @@ section.recipes {
         padding-right: 22px;
         margin-bottom: 22px;
         width: 25%;
+        height: auto;
         max-height: 700px;
         box-sizing: border-box;
         z-index: 2;
@@ -131,7 +132,7 @@ section.recipes {
             left: 0;
             background-color: $btnBgColor;
             color: white;
-            font-size: 0.7em;
+            font-size: 15px;
             padding: 0.5em 0.8em 0.6em;
             border-bottom-right-radius: 14px;
             z-index: 1;
@@ -174,5 +175,158 @@ section.recipes {
     height: 192px;
     width: 100%;
     background: white;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section1.recipes {
+    min-height: 550px;
+    height: 70vh;
+    .wrapping {
+      height: 50vh;
+      .inner {
+        height: 100px;
+        &:nth-child(1) {
+          height: 150px;
+        }
+        p {
+          font-size: 26.6px;
+        }
+      }
+    }
+  }
+
+  .recipes-filter {
+    span, select {
+      font-size: 19px;
+    }
+  }
+
+  .section2.recipes {
+    .inner {
+      ul.column {
+        li {
+          width: 33.333%;
+          a {
+            height: 40vw;
+            .product-card {
+              font-size: 13.3px;
+            }
+            .recipes-card-title {
+              p {
+                font-size: 30.4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .section1.recipes {
+    min-height: 400px;
+    height: 60vh;
+    .wrapping {
+      .inner {
+        p {
+          font-size: 24.6px;
+        }
+      }
+    }
+  }
+
+  .recipes-filter {
+    padding-top: 100px;
+    span, select {
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section1.recipes {
+    height: 60vh;
+    .wrapping {
+      height: 40vh;
+      .inner {
+        display: block;
+        h1 {
+          width: 100%;
+          font-size: 45px;
+        }
+        p {
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          font-size: 22.4px;
+        }
+      }
+    }
+  }
+
+  .recipes-filter {
+    padding-top: 0;
+    span, select {
+    }
+  }
+
+  .section2.recipes {
+    .inner {
+      padding-top: 20px;
+      ul.column {
+        li {
+          width: 50%;
+          a {
+            height: 60vw;
+            .product-card {
+              font-size: 16px;
+            }
+            .recipes-card-title {
+              p {
+                font-size: 25.6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section1.recipes {
+    .wrapping {
+      .inner {
+        p {
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+
+  .section2.recipes {
+    .inner {
+      ul.column {
+        li {
+          width: 100%;
+          padding-bottom: 20px;
+          a {
+            height: 70vh;
+            .product-card {
+              font-size: 16px;
+            }
+            .recipes-card-title {
+              p {
+                font-size: 25.6px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

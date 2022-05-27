@@ -30,6 +30,7 @@ section.our_range {
       height: 30%;
       h1 {
         position: relative;
+        width: 43%;
         color: white;
         top: 90%;
         font-size: $fontSizeh1;
@@ -136,18 +137,21 @@ main .section2:after {
       .swiper {
         width: 90%;
         .swiper-slide {
-          width: 313px;
-          height: 452px;
+          width: 21%;
+          height: auto;
           a {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             img {
-              width: 313px;
-              height: 412px;
+              width: 90%;
+              height: auto;
             }
             h4 {
+              padding: 0 22px;
+              margin-bottom: 5px;
+              text-align: center;
               display: inline-block;
             }
           }
@@ -155,7 +159,7 @@ main .section2:after {
       }
       &:last-child {
         .swiper {
-          width: 50%;
+          width: 70%;
         }
       }
     }
@@ -167,6 +171,7 @@ main .section2:after {
 }
 
 .swiper-button-next.slide-btn , .swiper-button-prev.slide-btn {
+  position: absolute;
   width: 60px;
   height: 60px;
   background-color: #ECD2B6;
@@ -174,4 +179,162 @@ main .section2:after {
 
 .swiper-button-prev.slide-btn {
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1200px) {
+  .section1.our_range {
+    height: 50vh;
+    min-height: 55vh;
+    .wrapping {
+      height: 50vh;
+      .inner {
+        h1 {
+          font-size: 71px;
+        }
+        p {
+          font-size: 26.6px;
+        }
+      }
+    }
+  }
+
+  .section2.our_range {
+    .wrapping ul li a {
+      font-size: 20.9px;
+    }
+  }
+
+  .section3.our_range {
+    .wrapping {
+      .inner {
+        h3 {
+          font-size: 43px;
+        }
+        p {
+          width: 60%;
+          font-size: 19px;
+        }
+        a {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .section1.our_range {
+    .wrapping {
+      .inner {
+        h1 {
+          font-size: 6vw;
+        }
+        p {
+          left: 37%;
+        }
+      }
+    }
+  }
+
+  .section3.our_range {
+    .wrapping {
+      .inner {
+        margin-top: 80px;
+        h3 {
+          font-size: 43px;
+        }
+        p {
+          width: 100%;
+          font-size: 19px;
+        }
+        a {
+          font-size: 19px;
+        }
+        &:last-child {
+          padding: 80px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section1.our_range {
+    height: 35vh;
+    min-height: 35vh;
+    .wrapping {
+      height: 35vh;
+      display: block;
+      .inner {
+        h1 {
+          width: 100%;
+          font-size: 44px;
+        }
+        p {
+          top: 70px;
+          left: 0;
+          width: 100%;
+          font-size: 22.6px;
+        }
+      }
+    }
+  }
+
+  .section2.our_range {
+    .wrapping ul li a {
+      font-size: 17.6px;
+    }
+  }
+
+  .section2.our_range{
+    height: 65px;
+    .wrapping ul {
+      li {
+        height: 30px;
+      }
+    }
+  }
+
+  .section3.our_range {
+    .wrapping {
+      .inner {
+        margin-top: 30px;
+        h3 {
+          font-size: 36.4px;
+        }
+        p {
+          font-size: 16px;
+        }
+        a {
+          font-size: 16px;
+        }
+        &:last-child {
+          padding: 30px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .section1.our_range {
+    height: 40vh;
+    min-height: 40vh;
+    .wrapping {
+      height: 40vh;
+      display: block;
+      .inner {
+        h1 {
+          width: 100%;
+          font-size: 40px;
+        }
+        p {
+          top: 80px;
+          left: 0;
+          width: 100%;
+          font-size: 20.6px;
+        }
+      }
+    }
+  }
 }

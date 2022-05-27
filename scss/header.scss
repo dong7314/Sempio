@@ -95,7 +95,7 @@
           display: none;
           li {
             padding-left: 5vw;
-            width: 100%;
+            width: 90%;
             margin-left: 0;
             &:last-child a {
               border-bottom: 0;
@@ -112,6 +112,10 @@
               border-bottom: 1px solid white;
               box-sizing: border-box;
               &:hover {
+                color: #E51C24;
+              }
+              &.on {
+                border-bottom: 1px solid white;
                 color: #E51C24;
               }
             }
